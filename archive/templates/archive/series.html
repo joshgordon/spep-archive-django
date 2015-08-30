@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0030)https://archive.spepmedia.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<!-- array(1) {
+  [0]=>
+  string(0) ""
+}
+1 - --><title> Sermon Archive</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://archive.spepmedia.com/style.css">
+</head>
+<body>
+<div class="content-fluid">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1>SPEP Sermon Archive</h1>
+  </div>
+</div>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h4>
+<a href="#">Home</a></h4>
+</div>
+
+</div>
+
+<!--
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<div class="well well-sm">
+  {{text}}
+</div>
+</div>
+</div>
+-->
+<div class="row">
+
+<div class="col-md-8 col-md-offset-2">
+
+<table class="table table-striped">
+<thead>
+<tr><th class="col-md-4">Sermon Title</th><th class="col-md-4">Series Name</th><th class="col-md-4"></th>Date</tr>
+</thead><tbody>
+  {% for sermon in sermons %}
+    <tr>
+      <td><a href="https://d2qmhswfbgwddq.cloudfront.net/{{sermon.url}}">{{ sermon.sermon_title }}</td>
+      <td>{{ sermon.pastor.name }}</td>
+      <td>{{ sermon.pub_date }}</td>
+    </tr>
+  {% endfor %}
+</tbody></table>
+</div>
+
+</div>
+</div>
+<div class="footer">
+  <div class="container">
+    <p class="text-muted"><a href="http://spepchurch.org/">Severna Park EP Church (PCA)</a>
+      :: Hosted on <a href="https://www.digitalocean.com/?refcode=c0167ae9a50a">DigitalOcean</a>
+      :: <a href="http://validator.w3.org/check?uri=archive.spepmedia.com">Valid XHTML</a></p>
+  </div>
+</div>
+
+
+
+<!--Debug info goes here
+
+
+/debug-->
+</body></html>
