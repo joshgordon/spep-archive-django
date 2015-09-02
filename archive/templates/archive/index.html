@@ -75,12 +75,12 @@
 
 <table class="table table-striped">
 <thead>
-<tr><th class="col-md-1"></th><th class="col-md-3">Series Name</th><th class="col-md-8">Description</th></tr>
+<tr><th class="col-md-1"></th><th class="col-md-5">Series Name</th><th class="col-md-6">Description</th></tr>
 </thead><tbody>
   {% for series in all_series %}
     <tr>
       <td><span class="glyphicon glyphicon-folder-close"></span></td>
-      <td><a href="{%url 'archive:series' series.id %}"{{ series.name }}</td>
+      <td><a href="{%url 'archive:series' series.id %}">{{ series.name }}</td>
       <td>{{ series.short_description }}</td>
     </tr>
   {% endfor %}

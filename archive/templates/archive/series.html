@@ -8,7 +8,7 @@
   [0]=>
   string(0) ""
 }
-1 - --><title> Sermon Archive</title>
+1 - --><title>{{series.name}} - SPEP Sermon Archive</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -29,13 +29,13 @@
 <div class="content-fluid">
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <h1>SPEP Sermon Archive</h1>
+    <h1>SPEP Sermon Archive - {{series.name}}</h1>
   </div>
 </div>
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
 <h4>
-<a href="#">Home</a></h4>
+<a href="{% url 'archive:index' %}">Home</a> &gt;&gt; <a href="#">{{series.name}}</a></h4>
 </div>
 
 </div>
@@ -55,7 +55,7 @@
 
 <table class="table table-striped">
 <thead>
-<tr><th class="col-md-4">Sermon Title</th><th class="col-md-4">Series Name</th><th class="col-md-4"></th>Date</tr>
+<tr><th class="col-md-6">Sermon Title</th><th class="col-md-3">Pastor</th><th class="col-md-3">Date Preached</th></tr>
 </thead><tbody>
   {% for sermon in sermons %}
     <tr>
