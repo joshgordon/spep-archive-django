@@ -15,7 +15,7 @@ from django.utils import dateparse
 
 sermons_type = Type.objects.get(name="Sermon")
 
-path = "/Users/josh/sermon-archive/sermons/"
+path = "/data/sermons"
 
 regex = re.compile(r"[^ _.]+")
 
@@ -30,7 +30,7 @@ for subdir, dirs, files in os.walk(path):
         filepath = os.path.join(subdir, file)
         info = { "title": file.split('.')[0], "series": subdir.split('/')[-1],
             "author": "", "date": datetime.date(1970, 1, 1),
-            "filename": '/'.join(filepath.split('/')[4:]), "seq": 0, "verse": ""}
+            "filename": '/'.join(filepath.split('/')[3:]), "seq": 0, "verse": ""}
         taginfo = None
         try:
             taginfo = ID3(filepath)

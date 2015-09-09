@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^series/(?P<pk>[0-9]+)/$', views.series, name='series'),
+    url(r'^(?P<seriesName>.+)/$', views.series, name='series'),
 ]
     

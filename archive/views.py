@@ -10,8 +10,8 @@ def index(request):
     context = { 'featured': featured, 'all_series': all_series }
     return render(request, 'archive/index.html', context)
 
-def series(request, pk):
-    series = Series.objects.get(id=pk)
-    sermons = series.sermon_set.all()
+def series(request, seriesName):
+    series = Series.objects.get(name=seriesName)
+    sermons = series.sermon_set.order_by('pub_date', 'sequence_num')
     context = { 'sermons': sermons, 'series': series}
     return render(request, 'archive/series.html', context)
