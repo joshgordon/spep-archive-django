@@ -55,13 +55,14 @@
 
 <table class="table table-striped">
 <thead>
-<tr><th class="col-md-6">Sermon Title</th><th class="col-md-3">Pastor</th><th class="col-md-3">Date Preached</th></tr>
+<tr><th class="col-md-3">Sermon Title</th><th class="col-md-3">Pastor</th><th class="col-md-3">Date Preached</th><th class="col-md-3">Verse</th></tr>
 </thead><tbody>
   {% for sermon in sermons %}
     <tr>
       <td><a href="https://d2qmhswfbgwddq.cloudfront.net/{{sermon.url}}">{{ sermon.sermon_title }}</td>
       <td>{{ sermon.pastor.name }}</td>
       <td>{{ sermon.pub_date }}</td>
+      <td>{{ sermon.verse}}</td>
     </tr>
   {% endfor %}
 </tbody></table>
